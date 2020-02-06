@@ -1,0 +1,29 @@
+$bg-dark: #1a1a1a;
+$light-color: #fff;
+$success-color: #219653;
+$p1: 1rem;
+$p2: 2rem;
+$f1: 1rem;
+$f2: 2rem;
+$m1: 1rem;
+$m2: 2rem;
+
+*{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-size: cover;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: $bg-dark;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+

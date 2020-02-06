@@ -1,0 +1,531 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #1a1a1a;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.nav-bar_title {
+  font-size: 1.5rem;
+  margin: .75rem;
+}
+
+.nav-bar_links {
+  display: none;
+  width: 100%;
+}
+
+.nav-bar_links.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-bar_links ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.nav-bar_links ul li {
+  text-align: center;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav-bar_links ul li:hover {
+  background-color: #2e4b3b;
+}
+
+.nav-bar_links ul li a {
+  color: #fff;
+  padding: .5rem 1rem;
+  display: block;
+}
+
+.nav-bar .toggle-button {
+  position: absolute;
+  top: 1.15rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 27px;
+  height: 18px;
+}
+
+.nav-bar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#destaque img {
+  display: block;
+  width: 100%;
+  background-size: cover;
+  border: 2px solid #219653;
+  opacity: 0.9;
+}
+
+#destaque .destaque_title h1 {
+  position: relative;
+  display: none;
+}
+
+#destaque .destaque_title p {
+  position: relative;
+  display: none;
+}
+
+#em-cartaz h1 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  color: #219653;
+}
+
+#em-cartaz .em-cartaz_bg {
+  background-attachment: fixed;
+  background-image: url(../img/fundo-cartaz.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-size: cover;
+}
+
+#em-cartaz .filmes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+}
+
+#em-cartaz .filmes:last-child {
+  margin-bottom: 15px;
+}
+
+#em-cartaz .filmes img {
+  width: 40%;
+  height: 40%;
+  margin-top: 2rem;
+}
+
+#em-cartaz .filmes a {
+  font-family: Impact;
+  font-size: 1rem;
+  line-height: 22px;
+  color: #219653;
+  padding-top: 10px;
+}
+
+#em-cartaz .filmes p {
+  margin: 0;
+  font-size: .90rem;
+  line-height: 21px;
+  color: #fff;
+}
+
+.instalacoes_title {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  color: #219653;
+}
+
+.instalacoes img {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#rodape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+#rodape h1 {
+  font-family: Impact;
+  font-size: 1.5rem;
+  line-height: 22px;
+  color: #219653;
+  font-weight: normal;
+}
+
+#rodape p {
+  font-family: Roboto;
+  font-size: 1rem;
+  line-height: 23px;
+  padding: 8px;
+  color: #fff;
+  opacity: 0.3;
+}
+
+#rodape i {
+  font-family: Font Awesome 5 Brands;
+  font-size: 1.7rem;
+  line-height: 35px;
+  color: #fff;
+  padding-right: 10px;
+}
+
+#rodape i:hover {
+  color: #2e4b3b;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+@media only screen and (min-width: 768px) {
+  .toggle-button {
+    display: none !important;
+  }
+  .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .nav-bar .nav-bar_title {
+    font-size: 2.7rem;
+    margin: 1.3rem 0 .75rem 5rem;
+    padding: 0;
+  }
+  .nav-bar_links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 2rem 2.3rem 0 0;
+  }
+  .nav-bar_links ul {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .nav-bar_links ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    line-height: 21px;
+    padding: 0;
+    text-transform: capitalize;
+  }
+  .nav-bar_links ul li:hover {
+    background: none;
+    text-transform: uppercase;
+  }
+  .nav-bar_links ul a:hover {
+    color: #219653;
+  }
+  #destaque {
+    position: relative;
+  }
+  #destaque img {
+    width: 100%;
+    background-size: cover;
+    display: block;
+    border: 4px solid #219653;
+  }
+  #destaque .destaque_title h1 {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    left: 8rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    line-height: 32px;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+  #destaque .destaque_title p {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 7rem;
+    left: 8rem;
+    width: 48%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 4.5rem;
+    color: #fff;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 0;
+  }
+  #em-cartaz h1 {
+    font-size: 1.8rem;
+  }
+  #em-cartaz .em-cartaz_bg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  #em-cartaz .em-cartaz_bg .filmes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #em-cartaz .em-cartaz_bg .filmes:last-child {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #em-cartaz .em-cartaz_bg img {
+    margin-left: 1rem;
+    width: 80%;
+    height: auto;
+    vertical-align: center;
+  }
+  #em-cartaz .em-cartaz_bg img:first-child {
+    margin-left: 0px;
+  }
+  #em-cartaz .em-cartaz_bg div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    vertical-align: middle;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .instalacoes h1 {
+    font-size: 1.8rem;
+  }
+  .instalacoes .img_instalacoes {
+    display: inline-block;
+    width: 32.99%;
+  }
+  #rodape {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 30px 0 60px 0;
+  }
+  #rodape h1 {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    margin: 10px;
+  }
+  #rodape div {
+    width: 33%;
+    height: 93.16px;
+  }
+  #rodape p {
+    text-align: center;
+    margin: 0 0 0 20px;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.section_a__img {
+  width: 70%;
+  margin-top: 20px;
+}
+
+.section_b__title {
+  font-size: 1.7rem;
+  color: #219653;
+}
+
+.section_b__classificacao {
+  width: 4%;
+}
+
+.sinopse_title {
+  font-size: 1.6rem;
+  color: #219653;
+}
+
+.sinopse_texto {
+  margin: .75rem;
+}
+
+.sinopse_trailer {
+  width: 100%;
+}
+
+.trailer {
+  width: 90%;
+  height: auto;
+  margin: 5%;
+}
+
+.button {
+  background: #219653;
+  padding: 15px 30px;
+  margin: 15px auto;
+  border-radius: 7px;
+}
+
+.button a {
+  padding-left: 5px;
+  color: #fff;
+}
+
+.button a:hover {
+  color: #2e4b3b;
+}
+
+.button i:hover {
+  color: #2e4b3b;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .section_a__img {
+    width: 83%;
+    margin-top: 30%;
+  }
+  .section_b__classificacao {
+    width: 1.5%;
+  }
+  .sinopse_title {
+    font-size: 2rem;
+  }
+  .section_b__title {
+    font-size: 2.1rem;
+  }
+  .sinopse_texto {
+    font-size: 1.3rem;
+    margin: 2.5rem;
+  }
+  .trailer {
+    margin: 0;
+  }
+  .sinopse_trailer {
+    width: 50%;
+    margin: 0 auto;
+    height: 80%;
+  }
+  .button {
+    padding: 1.5% 10%;
+    border-radius: 5px;
+  }
+  .sinopse_trailer {
+    width: 75%;
+    height: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

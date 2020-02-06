@@ -1,0 +1,565 @@
+@import "config";
+
+// NAV BAR
+
+.nav-bar{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+                  -webkit-box-align: start;
+                          align-items: flex-start;
+                          -webkit-box-orient: vertical;
+                          -webkit-box-direction: normal;
+                                  flex-direction: column;
+  background-color: $bg-dark;
+  color: $light-color;
+  &_title{
+
+    font-size: 1.5rem;
+    margin: .75rem;
+  }
+
+  &_links{
+    display: none;
+    width: 100%;
+  }
+
+  &_links.active{
+    display: -webkit-box;
+    display: flex;
+ 
+  }
+
+  &_links ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    li{
+      text-align: center;
+      list-style: none;
+      text-transform: uppercase;
+      &:hover{
+  
+          background-color: #2e4b3b;
+        
+      }
+      
+      a{
+        color: $light-color;
+        padding: .5rem 1rem;
+        display: block;
+      }
+    }
+  }
+
+.toggle-button{
+  position: absolute;
+  top: 1.15rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 27px;
+  height: 18px; 
+  & .bar{
+    height: 3px;
+    width: 100%;
+    background-color: $light-color;
+    border-radius: 10px;
+  }       
+}
+
+}
+
+// SECTION DESTAQUE
+
+#destaque{
+img{
+    display: block;
+    width: 100%;
+    background-size: cover; 
+    border: 2px solid $success-color;
+    opacity: 0.9;
+  }
+
+  & .destaque_title h1{
+    position: relative;
+    display: none;
+
+  }
+
+  & .destaque_title p{
+    position: relative;
+    display: none;
+
+  }
+
+}
+// SECTION EM CARTAZ
+#em-cartaz {
+  h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: $success-color;    
+  }
+
+  .em-cartaz_bg{
+    background-attachment: fixed;
+    background-image: url(../img/fundo-cartaz.png);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+            background-size: cover;
+  }
+
+  .filmes{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    align-self: center;
+    text-align: center;
+    &:last-child{
+      margin-bottom: 15px;
+    }
+    img{
+      width: 40%;
+      height: 40%;
+      margin-top: 2rem;
+    }
+    a{    
+    font-family: Impact;
+    font-size: 1rem;
+    line-height: 22px;
+    color: $success-color;
+    padding-top: 10px;
+    }
+
+    p{
+      margin: 0;
+      font-size: .90rem;
+      line-height: 21px;
+      color: $light-color;
+    }
+  }
+}
+ 
+
+// SECTION INSTALAÇÕES 
+
+.instalacoes{
+  &_title{ 
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: $success-color;    
+  }
+  img{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+// RODAPÉ 
+
+#rodape{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 35px;
+
+  h1{
+    font-family: Impact;
+    font-size: 1.5rem;
+    line-height: 22px;
+    color: $success-color;
+    font-weight: normal;
+  }
+  p{
+    font-family: Roboto;
+    font-size: 1rem;
+    line-height: 23px;
+    padding: 8px;
+    color: $light-color;
+    opacity: 0.3;
+  }
+
+  i{
+    font-family: Font Awesome 5 Brands;
+    font-size: 1.7rem;
+    line-height: 35px;
+    color: $light-color;
+    padding-right: 10px;
+    
+    &:hover{
+      color:  #2e4b3b;
+      -webkit-transition: 2s;
+      transition: 2s;
+    }
+  }
+
+
+}
+
+
+
+// MEDIAS QUERIES
+
+
+@media only screen and(min-width: 768px){
+
+// NAV BAR
+
+.toggle-button{
+  display: none !important;
+}
+
+.nav-bar{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+        
+
+          .nav-bar_title{
+            font-size: 2.7rem;
+            margin: 1.3rem 0 .75rem 5rem; 
+            padding: 0;
+          }
+
+          &_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem 2.3rem 0 0;
+
+  ul{
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+
+            li{
+              
+              font-family: 'Roboto', sans-serif;
+              font-size: 1.3rem;
+              line-height: 21px;
+              padding: 0;
+              text-transform: capitalize;
+              &:hover{
+              background: none;
+              text-transform: uppercase;
+            }
+            }
+            
+            a:hover{
+              color: $success-color;
+            }
+  }
+}
+}
+
+// DESTAQUE
+
+#destaque{
+  position: relative;
+  img{
+    width: 100%;
+    background-size: cover;
+    display: block;
+    border: 4px solid $success-color;
+  }
+  & .destaque_title h1{
+    display: block;
+    position: absolute; 
+    top: 5rem;
+    left: 8rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    line-height: 32px;
+    color: $light-color;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .destaque_title p{
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 7rem;
+    left: 8rem;
+    width: 48%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 4.5rem;
+    color: $light-color;
+    line-height: 73px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// EM CARTAZ
+
+#em-cartaz{
+  & h1{
+    font-size: 1.8rem;
+  }
+  .em-cartaz_bg{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+         
+            .filmes{
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+             
+              &:last-child{
+                margin: 0;
+                margin-bottom: 10px;
+              }
+            }
+            img{
+              margin-left: 1rem;
+              width: 80%;
+              height: auto;
+              vertical-align: center;
+             &:first-child{
+                margin-left: 0px;
+              }
+            }
+  
+            div{
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              -ms-flex-item-align: center;
+                  align-self: center;
+              vertical-align: middle;
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center;
+              margin: auto;
+              margin-bottom: 10px;
+              
+          }
+  }
+  
+}
+
+// INSTALAÇÕES
+
+.instalacoes{
+  & h1{
+    font-size: 1.8rem;
+  }
+  .img_instalacoes{
+    display: inline-block;
+    width: 32.99%;
+   
+   }
+
+}
+    
+ 
+// RODAPE 
+
+#rodape{
+
+  h1{
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+    margin: 10px;
+   
+  }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 30px 0 60px 0;
+  div{
+    width: 33%;
+    height: 93.16px;
+   
+  }
+  p{
+    text-align: center;
+    margin: 0 0 0 20px;
+  }
+}
+}
+
+
+
+//SINOPSES
+
+
+ .container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: $light-color;
+ }
+
+ .section_a__img{
+     width: 70%;
+     margin-top: 20px;
+
+ }
+
+ .section_b{
+   &__title{
+     font-size: 1.7rem;
+     color: $success-color;
+   }
+
+   &__classificacao{
+     width: 4%;
+   }
+
+ }
+
+ .sinopse_title{
+   font-size: 1.6rem;
+   color: $success-color;
+ }
+
+ .sinopse_texto{
+   margin: .75rem;
+ }
+ 
+ .sinopse_trailer{
+   width: 100%;
+   
+ }
+
+ .trailer{
+   width: 90%;
+   height: auto;
+   margin: 5%;
+ }
+
+ .button{
+   background: $success-color;
+   padding: 15px 30px;
+   margin:  15px auto;
+   border-radius: 7px;
+   a{
+     padding-left: 5px;
+     color: $light-color;
+     &:hover{
+       color: #2e4b3b;
+     }
+   }
+   i:hover{
+    color: #2e4b3b;
+    cursor: pointer;
+   }
+ }
+
+ @media screen and(min-width: 768px){
+
+
+   .section_a__img{
+     width: 83%;
+     margin-top: 30%;
+   }
+ 
+   .section_b__classificacao{
+     width: 1.5%;
+   }
+
+   .sinopse_title{
+     font-size: 2rem;
+   }
+
+   .section_b__title{
+     font-size: 2.1rem;
+   }
+
+   .sinopse_texto{
+     font-size: 1.3rem;
+     margin: 2.5rem;
+   }
+   
+   .trailer{
+     margin: 0;
+   }
+
+   .sinopse_trailer{
+     width: 50%;
+     margin: 0 auto;
+     height: 80%;
+   }
+   
+   .button{
+     padding: 1.5% 10%;
+     border-radius: 5px;
+
+   }
+   .sinopse_trailer{
+    width: 75%;
+    height: 70%;
+  }
+ 
+
+ }
